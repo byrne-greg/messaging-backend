@@ -9,7 +9,7 @@ module.exports = {
   },
 
   getMessagesForUser: function(req, res) {
-    db.find({ _fromUser: req.params.user }, function(err, items) {
+    db.find({ _toUser: req.params.user }, function(err, items) {
       res.json(items);
     });
   },
